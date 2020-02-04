@@ -206,3 +206,32 @@ console.log(name, age, country);
    */
   import { hello } from './module';
   hello();
+
+  /**
+   * Generators es una función especial que retorna una serie de valores 
+   * según el algoritmo definido
+   */
+  function* helloLosSantos() {
+    if(true) {
+      yield 'Welcome to ';
+    }
+
+    if(true) {
+      yield 'Los Santos';
+    }
+  };
+
+  const generatorWelcome = helloLosSantos();
+  /**
+   *  Next nos permite ejecutar la primer lógica y obtener el valor según sea el caso,
+   *  cuando se vuelva a ejecutar next va a recordar donde estaba la asignación lógica que 
+   *  acabamos de crear para mostrarnos el segundo valor y así por cada uno de los steps.
+   * */ 
+  console.log(generatorWelcome.next().value); // => Welcome to 
+  console.log(generatorWelcome.next().value); // => Los Santos
+  console.log(generatorWelcome.next().value); // => undefined
+
+  /**
+   * Un caso muy popular de generators es el Fibonacci.
+   * Recordar que ES6 saló en el 2015
+   */
