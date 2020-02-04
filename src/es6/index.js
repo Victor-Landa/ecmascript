@@ -170,7 +170,7 @@ console.log(name, age, country);
 
   // -- -- -- Clases, Módulos y Generadores -- -- --
   /**
-   * Las clases son una forma en la que vamos a manejar una sintáxis más 
+   * Las clases son una forma en la que vamos a manejar una sintaxis más 
    * clara para manejar objetos y también la herencia dentro de JS.
    * Esto nos permite como desarrolladores aplicar la POO dentro de este 
    * lenguaje.
@@ -227,11 +227,10 @@ console.log(name, age, country);
    *  cuando se vuelva a ejecutar next va a recordar donde estaba la asignación lógica que 
    *  acabamos de crear para mostrarnos el segundo valor y así por cada uno de los steps.
    * */ 
-  console.log(generatorWelcome.next().value); // => Welcome to 
+    console.log(generatorWelcome.next().value); // => Welcome to 
   console.log(generatorWelcome.next().value); // => Los Santos
   console.log(generatorWelcome.next().value); // => undefined
 
   /**
    * Un caso muy popular de generators es el Fibonacci.
-   * Recordar que ES6 saló en el 2015
    */
