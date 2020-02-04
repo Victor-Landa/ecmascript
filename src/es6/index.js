@@ -68,3 +68,27 @@ console.log(name, age, country);
  // Vamos a crear un nuevo elemento donde tengamos a Intel, team1, team2
  let companies = ['Intel', ...team1, ...team2];
  console.log(companies);
+
+ // Hemos estado utilizando `let` para hacer ciertas asignaciones
+ /**
+  * Let es una nueva forma en la que nosotros vamos a trabajar con 
+  * los elementos que queremos guardar en memoria.
+  * 
+  * Originalmente ocupábamos var para tener una variable de manera global, con let
+  * la variable sólo va a estar definida dentro del block scope.
+  */
+
+  {
+    var globalVar = 'Global Var';
+  }
+
+  {
+    let globalLet = 'Global Let';
+    console.log(globalLet);
+  }
+
+  console.log(globalVar);
+
+  // const nunca va a cambiar su valor
+  const a = 'b';
+  a = 'a'; // Error
