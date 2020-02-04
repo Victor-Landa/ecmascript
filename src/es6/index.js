@@ -199,3 +199,10 @@ console.log(name, age, country);
   const calc = new calculator();
   console.log(calc.sum(1, 16)); // 17
   console.log(calc.mult(13, 87)); // 1131
+
+  /**
+   * Otra de las características importantes con las que nos vamos a 
+   * encontrar va a ser con export e import (esto es trabajar con módulos).
+   */
+  import { hello } from './module';
+  hello();
