@@ -1,6 +1,6 @@
 /**
  * Una de las características añadidas en esta versión fue 
- * object entries, el cual no va a permitir devolver la clave 
+ * object entries, el cual nos va a permitir devolver la clave 
  * y los valores de una matriz.
  */
 const data = {
@@ -39,3 +39,30 @@ console.log('Food'.padEnd(12, '   -----'));
 console.log('Pizza'.padEnd(12, '  -----'));
 // Food   -----
 // Pizza  -----
+
+// -- -- -- Async Await -- -- --
+const helloWorld = () => {
+  return new Promise((resolve, reject) => {
+    (true)
+      ? setTimeout(() => resolve('Hello Mars'), 3000)
+      : reject(new Error('Test Error'))
+  })
+};
+
+const helloAsync = async () => {
+  const hello = await helloWorld();
+  console.log(hello);
+}
+
+helloAsync(); // => Hello Mars
+
+const anotherFunction = async () => {
+  try {
+    const hello = await helloWorld();
+    console.log(hello);
+  }catch(error) {
+    console.log(error);
+  }
+}
+
+anotherFunction(); // => Hello Mars
