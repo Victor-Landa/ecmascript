@@ -165,4 +165,37 @@ console.log(name, age, country);
 
   firstPromise()
     .then(response => console.log(response))
+    .then(() => console.log('Podemos tener múltiples then'))
     .catch(error => console.log(error));
+
+  // -- -- -- Clases, Módulos y Generadores -- -- --
+  /**
+   * Las clases son una forma en la que vamos a manejar una sintáxis más 
+   * clara para manejar objetos y también la herencia dentro de JS.
+   * Esto nos permite como desarrolladores aplicar la POO dentro de este 
+   * lenguaje.
+   */
+  class calculator {
+    // Asignamos un constructor (método para inicializar nuestra clase)
+    constructor() {
+      // Aquí vamos a asignar las varibales que van a estar definidas en un scope global
+      this.valueA = 0;
+      this.valueB = 0;
+    }
+
+    sum(valueA, valueB) {
+      this.valueA = valueA;
+      this.valueB = valueB;
+      return this.valueA + this.valueB;
+    }
+
+    mult(valueA, valueB) {
+      this.valueA = valueA;
+      this.valueB = valueB;
+      return this.valueA * valueB;
+    }
+  }
+
+  const calc = new calculator();
+  console.log(calc.sum(1, 16)); // 17
+  console.log(calc.mult(13, 87)); // 1131
